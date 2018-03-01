@@ -7,7 +7,7 @@ public class SparkUtil {
     public SparkSession initializeSpark(){
         SparkSession sparkSession = SparkSession.builder()
                 .master("local")
-                .appName("MongoSpark")
+                .appName("wikiSpark")
                 .config("spark.mongodb.input.uri", "mongodb://127.0.0.1/localdb.locations")
                 .config("spark.mongodb.output.uri", "mongodb://127.0.0.1/localdb.deviceCountNew")
                 .getOrCreate();
